@@ -8,6 +8,7 @@ import Routes from './routes';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
+import './AdminLTE.min.css';
 
 ReactDOM.render(
   <Routes history={browserHistory} />,

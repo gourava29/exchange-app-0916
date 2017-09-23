@@ -11,8 +11,8 @@ window.auth = {
 	isLoggedIn: false
 }
 function requireAuth(nextState, replaceState) {
-  if (!window.auth.isLoggedIn)
-    replaceState({ nextPathname: nextState.location.pathname }, '/login')
+  // if (!window.auth.isLoggedIn)
+  //   replaceState({ nextPathname: nextState.location.pathname }, '/login')
 }
 
 const Routes = (props) => (
