@@ -1,6 +1,8 @@
 // src/routes.js
 import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { withRR4 } from 'react-sidenav';
+
 
 import App from './components/App';
 import Login from './components/Login';
@@ -15,11 +17,16 @@ function requireAuth(nextState, replaceState) {
   //   replaceState({ nextPathname: nextState.location.pathname }, '/login')
 }
 
+const SideNav = withRR4();
+
 const Routes = (props) => (
   <Router {...props} history={browserHistory}>
   	<Route path="/">
   		<IndexRoute component={Login}/>
-  		<Route path="dashboard" component={App} onEnter={requireAuth} />
+  		<Route path="dashboard" component={App} onEnter={requireAuth} >
+        <SideNav>
+        </SideNav>
+      </Route>
   		<Route path="login" component={Login} />
     	<Route path="signup" component={Signup} />
     	<Route path="*" component={NotFound} />
