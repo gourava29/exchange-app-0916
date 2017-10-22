@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import Menu from '../Menu';
 
 import logo from './logo.svg';
 import './style.css';
@@ -19,7 +20,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
 
-        <MySideNav />
+        <Menu />
+        {this.props.children}
       </div>
     );
   }

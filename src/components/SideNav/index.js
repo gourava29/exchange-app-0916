@@ -10,24 +10,35 @@ import { profile } from 'react-icons-kit/icomoon/profile';
 
 
 //specify the base color/background of the parent container if needed
-const MySideNav = () => (
-    <div style={{background: '#2c3e50', color: '#FFF', width: 220}}> 
-        <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='sales' onItemSelection={ (id, parent) => { console.log(id, parent)}}>       
-            <Nav id='home'>
-                <NavIcon><SvgIcon size={20} icon={home}/></NavIcon>    
-                <NavText> Home </NavText>
-            </Nav>
-            <Nav id='profile'>
-                <NavIcon><SvgIcon size={20} icon={profile}/></NavIcon>
-                <NavText> Profile </NavText>
-            </Nav>   
-            <Nav id='settings'>
-                <NavIcon><SvgIcon size={20} icon={cog}/></NavIcon>
-                <NavText> Settings </NavText>
-            </Nav>
-            
-        </SideNav>
-    </div>
-)
+export default class MySideNav extends React.Component{
+    constructor(props) {
+        super(props);
+        this.onItemSelection = this.onItemSelection.bind(this);
+    }
 
-export default MySideNav;
+    onItemSelection(id, parent) {
+        console.log(id, parent)
+    }
+
+    render () {
+        return (
+            <div style={{background: '#2c3e50', color: '#FFF', width: 220}}> 
+                <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='home' onItemSelection={this.onItemSelection}>       
+                    <Nav id='home'>
+                        <NavIcon><SvgIcon size={20} icon={home}/></NavIcon>    
+                        <NavText> Home </NavText>
+                    </Nav>
+                    <Nav id='profile'>
+                        <NavIcon><SvgIcon size={20} icon={profile}/></NavIcon>
+                        <NavText> Profile </NavText>
+                    </Nav>   
+                    <Nav id='settings'>
+                        <NavIcon><SvgIcon size={20} icon={cog}/></NavIcon>
+                        <NavText> Settings </NavText>
+                    </Nav>
+                    
+                </SideNav>
+            </div>
+        )
+    }
+}
