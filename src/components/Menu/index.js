@@ -11,11 +11,11 @@ export default class Menu extends Component {
 			          <section className="sidebar">
 			            <div className="user-panel">
 			              <div className="pull-left image">
-			                <img src="/img/user2-160x160.jpg" className="img-circle" alt="User Image"/>
+			                <img src="/img/user2-160x160.jpg" className="img-circle" alt="User"/>
 			              </div>
 			              <div className="pull-left info">
 			                <p>Alexander Pierce</p>
-			                <a href="#"><i className="fa fa-circle text-success"></i> Online</a>
+			                <a href="#User"><i className="fa fa-circle text-success"></i> Online</a>
 			              </div>
 			            </div>
 			            <form action="#" method="get" className="sidebar-form">

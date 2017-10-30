@@ -5,8 +5,6 @@ import Menu from '../Menu';
 import logo from './logo.svg';
 import './style.css';
 
-import MySideNav from '../SideNav';
-
 class App extends Component {
   render() {
     const { className, ...props } = this.props;
