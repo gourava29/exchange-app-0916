@@ -10,7 +10,16 @@ class App extends Component {
     const { className, ...props } = this.props;
     return (
       <div className={classnames('App', className)} {...props}>
-        <Menu/>
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to React</h2>
+        </div>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+
+        <Menu />
+        {this.props.children}
       </div>
     );
   }

@@ -1,0 +1,11 @@
+@media (max-width: 767px){
+	.sideBarWrapper {
+	    position:relative;
+	    left:10px; 
+	}
+	.main-sidebar:hover {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+	}
+}

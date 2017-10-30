@@ -6,6 +6,8 @@ import App from './components/App';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import NotFound from './components/NotFound';
+import Layout from './components/Layout';
+
 
 window.auth = {
 	isLoggedIn: false
@@ -19,7 +21,9 @@ const Routes = (props) => (
   <Router {...props} history={browserHistory}>
   	<Route path="/">
   		<IndexRoute component={Login}/>
-  		<Route path="dashboard" component={App} onEnter={requireAuth} />
+  		<Route path="dashboard" component={App} onEnter={requireAuth} >
+        <Route path="/layout" component={Layout}/>
+      </Route>
   		<Route path="login" component={Login} />
     	<Route path="signup" component={Signup} />
     	<Route path="*" component={NotFound} />
